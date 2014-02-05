@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension version="2.5" type="plugin" group="system">
+	<name>PLG_TASK_EXPIRY_NOTIFIER</name>
+	<author>ANGEK DESIGN</author>
+	<copyright>(C) 2014 ANGEK DESIGN. All rights reserved.</copyright>
+	<creationDate>February 2014</creationDate>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>support@angekdesign.com.au</authorEmail>
+	<authorUrl>www.angekdesign.com.au</authorUrl>
+	<version>1.0.0</version>
+	<description>PLG_TASK_EXPIRY_NOTIFIER_DESC</description>
+	<scriptfile>script.php</scriptfile>
+	<files>
+		<filename plugin="pftaskexpirynotifier">pftaskexpirynotifier.php</filename>
+		<filename>cron_pf_notifier.php</filename>
+		<filename>script.php</filename>
+	</files>	
+	<languages>
+            <language tag="en-GB">language/en-GB/en-GB.plg_system_pftaskexpirynotifier.ini</language>
+            <language tag="en-GB">language/en-GB/en-GB.plg_system_pftaskexpirynotifier.sys.ini</language>
+    </languages>
+	<config>
+		<fields name="params">
+			<fieldset name="PFL_BASIC_SETTINGS">
+                <field type="text" name="cron_mail_from" default="" size="" class="input-large" label="CRON_EMAIL_FROM" description="CRON_EMAIL_FROM_DESC" />
+                <field type="text" name="cron_from_name" default="" size="" class="input-large" label="CRON_FROM_NAME" description="CRON_FROM_NAME_DESC" />
+				<field type="text" name="cron_task_email_subject" default="" size="" class="input-large" label="CRON_EMAIL_SUBJECT" description="CRON_EMAIL_SUBJECT_DESC" />
+				<field name="cron_task_email_message" type="textarea" default="" label="CRON_EMAIL_MESSAGE" description="CRON_EMAIL_MESSAGE_DESC" rows="10" cols="60" />
+				<field type="text" name="cron_mail_cc" default="" size="" class="input-large" label="CRON_EMAIL_CC" description="CRON_EMAIL_CC_DESC" />
+				<field type="text" name="cron_mail_bcc" default="" size="" class="input-large" label="CRON_EMAIL_BCC" description="CRON_EMAIL_BCC_DESC" />
+				<field type="text" name="cron_default_alert" default="1" size="" class="input-small" label="CRON_ALERT_PERIOD" description="CRON_ALERT_PERIOD_DESC" />
+				<field name="cron_default_interval" type="list" class="btn-group" default="DAY"	description="CRON_ALERT_INTERVAL_DESC" label="CRON_ALERT_INTERVAL">
+                    <option value="DAY">CRON_DAY</option>
+					<option value="WEEK">CRON_WEEK</option>
+					<option value="MONTH">CRON_MONTH</option>
+					<option value="HOUR">CRON_HOUR</option>
+                </field>
+				<field name="cron_default_condition" type="list" class="btn-group" default="equal" description="CRON_ALERT_CONDITION_DESC" label="CRON_ALERT_CONDITION">
+                    <option value="less">&lt;</option>
+					<option value="equal">=</option>
+                </field>				
+            </fieldset>
+			<fieldset name="PFL_OVERDUE_SETTINGS">
+				<field name="include_overdue_tasks"	type="radio" class="btn-group" default="0" description="CRON_OVERDUE_TASKS_DESC" label="CRON_OVERDUE_TASKS">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+				<field type="text" name="cron_overdue_alert" default="5" size="" class="input-small" label="CRON_OVERDUE_PERIOD" description="CRON_OVERDUE_PERIOD_DESC" />
+			</fieldset>
+			<fieldset name="PFL_TASK_INFO">
+				<field name="task_project_name"	type="radio" class="btn-group" default="1" description="CRON_PROJECT_NAME_DESC" label="CRON_PROJECT_NAME">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+				<field name="task_milestone_name"	type="radio" class="btn-group" default="1" description="CRON_MILESTONE_NAME_DESC" label="CRON_MILESTONE_NAME">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+				<field name="task_tasklist_name"	type="radio" class="btn-group" default="1" description="CRON_TASKLIST_NAME_DESC" label="CRON_TASKLIST_NAME">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+				<field name="task_priority"	type="radio" class="btn-group" default="1" description="CRON_TASK_PRIORITY_DESC" label="CRON_TASK_PRIORITY">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+				<field name="task_deadline"	type="radio" class="btn-group" default="1" description="CRON_TASK_DEADLINE_DESC" label="CRON_TASK_DEADLINE">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+				<field name="task_due_in" type="radio" class="btn-group" default="1" description="CRON_TASK_DUEIN_DESC" label="CRON_TASK_DUEIN">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+			</fieldset>
+        </fields>
+   </config>
+</extension>
