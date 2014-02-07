@@ -21,4 +21,4 @@ http://www.gnu.org/licenses/gpl-2.0
 Have a bug or a feature request? [Please open a new issue](https://github.com/angek/Projectfork-3rd-Party-Extensions/issues). Before opening an issue, please search for existing issues.
 
 ##Contributing
-Anyone and everyone is welcome to contribute. Contribution guidelines will be posted shortly.
+Anyone and everyone is welcome to contribute. Please take a moment to review the [guidelines for contributing](CONTRIBUTING.md)
