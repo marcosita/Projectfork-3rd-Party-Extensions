@@ -152,11 +152,11 @@ require_once JPATH_LIBRARIES . '/cms.php';
 				$filter .= $condition;
 				
 				$query = "SELECT t.*, p.title as ptitle,m.title as mtitle, tl.title as ltitle, tu.user_id as user, datediff(t.end_date, CURDATE()) as due
-					FROM dev_pf_tasks as t
-					LEFT JOIN dev_pf_ref_users as tu on tu.item_id = t.id
-					RIGHT JOIN dev_pf_projects as p on p.id = t.project_id AND p.state = 1
-					LEFT JOIN dev_pf_milestones as m on m.id = t.milestone_id
-					LEFT JOIN dev_pf_task_lists as tl on tl.id = t.list_id
+					FROM #__pf_tasks as t
+					LEFT JOIN #__pf_ref_users as tu on tu.item_id = t.id
+					RIGHT JOIN #__pf_projects as p on p.id = t.project_id AND p.state = 1
+					LEFT JOIN #__pf_milestones as m on m.id = t.milestone_id
+					LEFT JOIN #__pf_task_lists as tl on tl.id = t.list_id
 					WHERE p.id IN ($projects)
 					AND t.id = t.id
 					AND p.id = t.project_id
