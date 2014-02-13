@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="system">
+	<name>System - Projectfork To MS Project Exporter</name>
+	<author>ANGEK DESIGN</author>
+	<creationDate>February 2014</creationDate>
+	<copyright>ANGEK DESIGN</copyright>
+	<license>GNU General Public License</license>
+	<authorEmail>support@angekdesign.com.au</authorEmail>
+	<authorUrl>http://www.angekdesign.com</authorUrl>
+	<version>1.0</version>
+	<description>Export PF Projects to MS Project</description>
+	<files>
+		<filename plugin="pftomsproject">pftomsproject.php</filename>
+		<filename>index.html</filename>
+	</files>
+</extension>
