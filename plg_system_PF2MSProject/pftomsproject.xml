@@ -9,8 +9,31 @@
 	<authorUrl>http://www.angekdesign.com</authorUrl>
 	<version>1.0</version>
 	<description>Export PF Projects to MS Project</description>
+	<published>1</published>
+	<scriptfile>script.php</scriptfile>
 	<files>
 		<filename plugin="pftomsproject">pftomsproject.php</filename>
 		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<filename>script.php</filename>
+		<folder>helpers</folder>
 	</files>
+	<languages>
+            <language tag="en-GB">language/en-GB/en-GB.plg_system_pftomsproject.sys.ini</language>           
+            <language tag="en-GB">language/en-GB/en-GB.plg_system_pftomsproject.ini</language>           
+    </languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field  name="msproject_duration" type="radio"
+					default="7"
+					description="PLG_PFTOMSPROJECT_FIELD_DURATION_DESC"
+					label="PLG_PFTOMSPROJECT_FIELD_DURATION_LABEL"
+					>
+					<option value="7">PLG_PFTOMSPROJECT_DURATION_DAYS</option>
+					<option value="5">PLG_PFTOMSPROJECT_DURATION_HOURS</option>
+				</field>				
+			</fieldset>
+		</fields>
+	</config>
 </extension>
