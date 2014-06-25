@@ -12,6 +12,7 @@ defined('_JEXEC') or die();
 
 
 JHtml::_('pfhtml.script.listform');
+JHtml::_('jquery.framework',  true, true);
 
 $list_order = $this->escape($this->state->get('list.ordering'));
 $list_dir   = $this->escape($this->state->get('list.direction'));
